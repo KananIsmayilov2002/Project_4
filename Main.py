@@ -1,4 +1,4 @@
-from Gridworld import GridWorld #gridworld_env.py -> GridWorldEnv creates the environment (the "world") where the agent moves.
+from Gridworld import GridWorld 
 from Q_learning import QLearning, extract_policy, evaluate_agent 
 '''
 1. QLearning: the Q-learning algorithm class (the agent's learning brain),
@@ -15,15 +15,4 @@ if __name__ == "__main__":
     rewards = agent.train(episodes=1000) # Trains the agent using Q-learning for 1500 episodes:An episode = from start to reaching the goal (or failing), Rewards stores the rewards the agent got in each episode, which can be plotted later to see learning progress.
     policy = extract_policy(agent.Q, env) # After training, extracts the final policy from the learned Q-table:Policy = "for each cell, what's the best action?"
     evaluate_agent(env, policy, episodes=10) # Tests the agent: Runs 10 new episodes following the learned policy, Checks how well the agent reaches the goal using its knowledge.
-
-
-'''
-Build a random 40x40 world with a goal.
-
-Train an agent with Q-learning to reach the goal.
-
-Extract the learned best moves.
-
-Evaluate if the agent actually learned to reach the goal smartly.
-'''
 

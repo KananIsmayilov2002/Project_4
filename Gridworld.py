@@ -55,8 +55,8 @@ class GridWorld:
     def render(self, policy=None):
         grid = [['.' for _ in range(self.grid_size)] for _ in range(self.grid_size)]
         for terminal in self.terminal_states:
-            grid[terminal[0]][terminal[1]] = 'G'
-        grid[self.agent_pos[0]][self.agent_pos[1]] = 'A'
+            grid[terminal[0]][terminal[1]] = 'Goal'
+        grid[self.agent_pos[0]][self.agent_pos[1]] = 'Agent'
         for position, action in self.actions_taken:
             x, y = position
             grid[x][y] = action_to_arrow(action)
