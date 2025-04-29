@@ -9,9 +9,9 @@ GRID_SIZE = 40
 ACTIONS = ["N", "S", "E", "W"]
 teamId = '1449'
 otp = '5712768807' 
-episodes = 5       
+episodes = 7       
 max_steps = 5000
-alpha = 0.2         # Learning rate : you move 20% toward the new value and 80% stay with the old.
+alpha = 15         # Learning rate : you move 20% toward the new value and 80% stay with the old.
 gamma = 0.95        # Discount factor : It tells the agent how much it should care about future rewards.
 
 # Epsilon for exploration

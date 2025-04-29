@@ -44,7 +44,7 @@ class GridWorld:
 
     def get_reward(self, position):
         if position == self.goal_state:
-            return 20
+            return 15
         dist = np.linalg.norm(np.array(position) - np.array(self.goal_state))
         max_dist = np.sqrt(2) * self.grid_size
         return -0.1 - (dist / max_dist) * 0.05
